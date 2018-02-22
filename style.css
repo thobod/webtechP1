@@ -76,12 +76,11 @@ li a:hover {
 .column {
 	float: left;
 	height: 138px;
-	border: 1px solid white;
+	/*border: 1px solid white;*/
 }
 
 .column.side {
 	width: 20%;
-	white-space: nowrap;
 }
 
 .column.middle {
