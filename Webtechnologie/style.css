@@ -1,0 +1,99 @@
+body {
+    background-color: #455A64;
+    background-image: url("black_back.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+	font-family: Roboto;
+	font-size: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+}
+
+h2 {
+	font-family: Roboto;
+	font-size: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+}
+
+h3 {
+	font-family: Roboto;
+	font-size: 24px;
+    text-align: left;
+    color: white;
+}
+
+p {
+    font-family: roboto;
+    font-size: 16px;
+    color: white;
+}
+
+/* This is to create a navigation bar */
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	/*background-color: rgba(238,238,238, 0.2);*/
+	color: #BDBDBD;
+	font-family: Tahoma;
+	text-align: center;
+    text-transform: uppercase;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover {
+	color: white;
+}
+
+.active {
+	color: white;
+}
+
+.middle {
+	text-align: center;
+}
+
+.content {
+    margin: 0px 256px;
+}
+
+.column {
+	float: left;
+	height: 138px;
+	border: 1px solid white;
+}
+
+.column.side {
+	width: 20%;
+	white-space: nowrap;
+}
+
+.column.middle {
+	width: 60%;
+}
+
+.centerhelper {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+img {
+	vertical-align: middle;
+}
