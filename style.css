@@ -175,3 +175,8 @@ small {
 	height: 100%;
 	vertical-align: middle;
 }
+
+.tableborder {
+  border-bottom: solid thin;
+  border-color: #ffcd00;
+}
