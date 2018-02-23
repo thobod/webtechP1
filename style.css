@@ -97,8 +97,8 @@ nav li a:hover {
   background-color: rgba(128, 128, 128, 0.2);
 }
 
-.active {
-	color: white !important;
+section {
+    margin: 0px 15%;
 }
 
 li {
@@ -114,6 +114,7 @@ table {
 
 th {
   background-color: #ffcd00;
+  text-align: left;
   color: black;
   padding: 4px 16px;
 }
@@ -122,16 +123,21 @@ td {
   padding: 4px 16px;
 }
 
-table th {
-  text-align: left;
+footer {
+  text-align: center;
+}
+
+small {
+  color: white;
+  font-family: Verdana;
+}
+
+.active {
+	color: white !important;
 }
 
 .middle {
 	text-align: center;
-}
-
-.content {
-    margin: 0px 256px;
 }
 
 .column {
