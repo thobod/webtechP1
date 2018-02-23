@@ -104,11 +104,10 @@ table th {
     margin: 0px 256px;
 }
 
-/*
 .column {
 	float: left;
 	height: 138px;
-	/*border: 1px solid white;
+	border: 1px solid white;
 }
 
 .column.side {
