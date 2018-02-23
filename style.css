@@ -38,6 +38,12 @@ hr {
   border-color: #9E9E9E;
 }
 
+figcaption{
+        font-family: Roboto;
+    font-size: 16px;
+    color: white;
+}
+
 /* This is to create a navigation bar */
 nav ul {
 	list-style-type: none;
