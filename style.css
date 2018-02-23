@@ -53,7 +53,7 @@ a:visited {
 }
 
 a:hover {
-  color: #ffcd00;
+  color: #ffe26d;
 }
 
 a:active {
@@ -121,6 +121,22 @@ th {
 
 td {
   padding: 4px 16px;
+}
+
+td a {
+  color: inherit;
+}
+
+td a:visited {
+  color: #9E9E9E;
+}
+
+td a:hover {
+  color: #BDBDBD;
+}
+
+td a:active {
+  color: inherit;
 }
 
 footer {
