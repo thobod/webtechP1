@@ -6,7 +6,7 @@ body {
 }
 
 h1 {
-  font-family: Roboto;
+  font-family: Corbel;
   font-size: 45px;
   text-align: center;
   text-transform: uppercase;
@@ -14,14 +14,14 @@ h1 {
 }
 
 h2 {
-  font-family: Roboto;
+  font-family: Corbel;
 	font-size: 24px;
   text-align: left;
   color: white;
 }
 
 h3 {
-	font-family: Roboto;
+	font-family: Corbel;
 	font-size: 20px;
   font-weight: bold;
   text-align: left;
@@ -29,7 +29,7 @@ h3 {
 }
 
 p {
-  font-family: Roboto;
+  font-family: Verdana;
   font-size: 16px;
   color: white;
 }
@@ -39,9 +39,25 @@ hr {
 }
 
 figcaption{
-        font-family: Roboto;
-    font-size: 16px;
-    color: white;
+  font-family: Verdana;
+  font-size: 16px;
+  color: white;
+}
+
+a {
+  color: #ffcd00;
+}
+
+a:visited {
+  color: #e0b60b;
+}
+
+a:hover {
+  color: #ffcd00;
+}
+
+a:active {
+  color: #9E9E9E;
 }
 
 /* This is to create a navigation bar */
@@ -63,9 +79,17 @@ nav li a {
 	color: #9E9E9E;
 	font-family: Tahoma;
 	text-align: center;
-    text-transform: uppercase;
+  text-transform: uppercase;
 	padding: 14px 16px;
 	text-decoration: none;
+}
+
+nav li a:link {
+  color: #9E9E9E;
+}
+
+nav li a:visited {
+  color: #9E9E9E;
 }
 
 nav li a:hover {
@@ -73,19 +97,19 @@ nav li a:hover {
   background-color: rgba(128, 128, 128, 0.2);
 }
 
-nav .active {
-	color: white;
+.active {
+	color: white !important;
 }
 
 li {
   color: white;
-  font-family: Roboto;
+  font-family: Verdana;
 }
 
 table {
   color: white;
   border-collapse: collapse;
-  font-family: Roboto;
+  font-family: Verdana;
 }
 
 th {
