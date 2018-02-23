@@ -1,16 +1,16 @@
 body {
-    background-color: #455A64;
-    background-image: url("black_back.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  background-color: #455A64;
+  background-image: url("black_back.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1 {
-	  font-family: Roboto;
-	  font-size: 45px;
-    text-align: center;
-    text-transform: uppercase;
-    color: white;
+  font-family: Roboto;
+  font-size: 45px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
 }
 
 h2 {
@@ -29,9 +29,13 @@ h3 {
 }
 
 p {
-    font-family: Roboto;
-    font-size: 16px;
-    color: white;
+  font-family: Roboto;
+  font-size: 16px;
+  color: white;
+}
+
+hr {
+  border-color: #9E9E9E;
 }
 
 /* This is to create a navigation bar */
