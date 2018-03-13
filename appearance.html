@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>INFOB2WT - Webtechnology</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="keywords" content="webtechnology, UU, university Utrecht, INFOB2WT, Universiteit Utrecht" />
+    <meta name="description" content="the course website of webtechnology at Utrecht University" />
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="logo-uu.svg" alt="UU logo" class="verticalcenter">
+      <h2 class="middle">Department of Information and Computing Sciences</h2>
+      <h1>Webtechnologie</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a>
+        <li><a href="page1.html">Grading</a>
+        <li><a href="page2.html">Schedule</a>
+        <li><a href="page3.html">Tools</a>
+        <li><a href="page4.html">Assignment</a>
+        <li><a href="appearance.html" class="active">Edit Appearance</a>
+      </ul>
+    </nav>
+
+    <section class="content">
+      <hr/>
+      <h2>JavaScript</h2>
+      <table>
+        <tr>
+          <td>
+            Normal
+          </td>
+          <td class="middle">
+            <input type="radio" checked="checked" name="pStyle">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Italic
+          </td>
+          <td class="middle">
+            <input type="radio" name="pStyle">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Bold
+          </td>
+          <td class="middle">
+            <input type="radio" name="pStyle">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Text Color
+          </td>
+          <td class="middle">
+            <input type="color" id="colorPicker">
+          </td>
+        </tr>
+      </table>
+      <br>
+      <button id="styleButton">Change!</button>
+      <h3>Changing text</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec aliquam diam, eu venenatis lorem. Nunc scelerisque neque non mi sodales egestas ut et nisi. Suspendisse ut eleifend massa. Donec feugiat nisi eget molestie volutpat. Aliquam dolor mi, imperdiet a lobortis eu, pharetra a turpis. Pellentesque rhoncus velit id mi sollicitudin aliquam. Nullam ut porta arcu. Nullam facilisis aliquam tellus sed sodales. Sed facilisis varius magna nec imperdiet. Nam egestas, nisi eget sodales vehicula, nisi dui sollicitudin ex, at luctus nibh ante at dui. Maecenas dictum blandit luctus. Quisque auctor ligula vitae elit tincidunt auctor. Fusce elementum ornare massa, non rhoncus orci efficitur eget.</p>
+    </section>
+
+    <footer>
+      <small>&copy; Copyright 2018, Mattijs Leon (5656508) & Thomas Boddeus (5988179)</small>
+    </footer>
+
+    <script type="text/javascript" src="appearance.js"></script>
+  </body>
+</html>
