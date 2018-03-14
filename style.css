@@ -37,7 +37,11 @@ p {
 label {
   font-family: Verdana;
   font-size: 16px;
-  color: white;
+  color: #e0b60b;
+}
+
+label:hover {
+  color: #ffcd00;
 }
 
 hr {
