@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>INFOB2WT - Webtechnology</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="http://www.pureexample.com/js/lib/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="http://www.pureexample.com/js/flot/jquery.flot.min.js"></script>
+    <script type="text/javascript">
+        var data = [[1,0],[2,0],[3,2],[4,0],[5,2]];
+
+        var dataset = [{label: "aantal collegeuren webtech per dag",data: data}];
+
+        var options = {
+            series: {
+                lines: { show: true },
+                points: {
+                    radius: 3,
+                    show: true
+                }
+            }
+        };
+
+        $(document).ready(function () {
+            $.plot($("#flot-placeholder"), dataset, options);
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <img src="logo-uu.svg" alt="UU logo" class="verticalcenter">
+        <h2 class="middle">Department of Information and Computing Sciences</h2>
+        <h1>Webtechnologie</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a>
+            <li><a href="page1.html">Grading</a>
+            <li><a href="page2.html">Schedule</a>
+            <li><a href="page3.html">Tools</a>
+            <li><a href="page4.html">Assignment</a>
+            <li><a href="page5.html"class="active">Graph</a>
+            <li><a href="page6.html">Knowledge-Base</a>
+            <li><a href="appearance.html">edit appearance</a>
+</ul>
+    </nav>
+    <section class="content">
+        <hr />
+        <h1>studiebelastinganalysegrafiek ...</h1>
+        <p>
+            onderstaande vindt u een zeer nutteloze grafiek beschrijvende het aantal uren die er per week gemaakt worden
+        </p>
+        <div id="flot-placeholder" style="width:300px; height:300px"></div>
+    </section>
+</body>
+</html> 
