@@ -55,6 +55,8 @@ figcaption{
 }
 
 a {
+  font-family: Verdana;
+  font-size: 16px;
   color: #ffcd00;
 }
 
