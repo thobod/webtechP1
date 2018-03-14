@@ -21,6 +21,10 @@ class HTMLFactory {
     }
     return (result += "</ul>");
   }
+
+  getLink(text, link) {
+    return "<a href='#" + link + "'>" + text + "</a>";
+  }
 }
 
 fac = new HTMLFactory();

@@ -3,28 +3,97 @@
 <head>
     <title>INFOB2WT - Webtechnology</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-    <script type="text/javascript" src="http://www.pureexample.com/js/lib/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="http://www.pureexample.com/js/flot/jquery.flot.min.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="excanvas.js"></script>
+    <script src="jquery.flot.min.js"></script>
+
+    <!-- Javascript -->
     <script type="text/javascript">
-        var data = [[1,0],[2,0],[3,2],[4,0],[5,2]];
+var days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+var data = [
+    [1, 0], [2, 0], [3, 2], [4, 0], [5, 2]
+];
+var options = {
+    series: {
+        lines: { show: true },
+        points: {
+            radius: 5,
+            show: true
+        }
+    },
+    colors: ["#ffcd00"],
+    grid: {
+        hoverable: true,
+        clickable: true,
 
-        var dataset = [{label: "aantal collegeuren webtech per dag",data: data}];
+        backgroundColor: { colors: ["#ffffff", "#7A7A7A"] }
+    },
+    xaxis:{
+        ticks: [
+                 [1,"Mon"],[2,"Tue"],[3,"Wed"],[4,"Thu"],[5,"Fri"]
+        ],
+    }
+}
+
+var previousPoint = null;
+$.fn.UseTooltip = function () {
+    $(this).bind("plothover", function (event, pos, item) {
+        if (item) {
+            if (previousPoint != item.dataIndex) {
+                previousPoint = item.dataIndex;
 
-        var options = {
-            series: {
-                lines: { show: true },
-                points: {
-                    radius: 3,
-                    show: true
-                }
+                $("#tooltip").remove();
+
+                var x = item.datapoint[0];
+                var y = item.datapoint[1];
+
+                showTooltip(item.pageX, item.pageY,
+                  days[x-  1] + "<br/>" + "<strong>" + y + "</strong> (" + item.series.label + ")");
             }
-        };
+        }
+        else {
+            $("#tooltip").remove();
+            previousPoint = null;
+        }
+    });
+};
 
-        $(document).ready(function () {
-            $.plot($("#flot-placeholder"), dataset, options);
-        });
+$(this).bind("plotclick", function (event, pos, obj) {
+    window.location.replace("page2.html");
+});
+
+
+function showTooltip(x, y, contents) {
+    $('<div id="tooltip">' + contents + '</div>').css({
+        position: 'absolute',
+        display: 'none',
+        top: y + 10,
+        left: x + 20,
+        border: '2px solid #FFFFFF',
+        padding: '2px',
+        size: '10',
+        'border-radius': '6px 6px 6px 6px',
+        'background-color': '#fff',
+        opacity: 0.80
+    }).appendTo("body").fadeIn(200);
+}
+
+var plot;
+
+$(function () {
+    plot = $.plot($("#graph"),
+        [{
+            data: data,label: "hours of class per day",lines: { show: true},points: { show: true }
+        }
+        ],options
+    );
+
+    $("#graph").UseTooltip();
+});
     </script>
+
+    <!-- HTML -->
+
 </head>
 <body>
     <header>
@@ -34,15 +103,15 @@
     </header>
     <nav>
         <ul>
-          <li><a href="index.html">Home</a>
-          <li><a href="page1.html">Grading</a>
-          <li><a href="page2.html">Schedule</a>
-          <li><a href="page3.html">Tools</a>
-          <li><a href="page4.html">Assignment</a>
-          <li><a href="page5.html"class="active">Graph</a>
-          <li><a href="knowledgebase.html">Knowledge Base</a>
-          <li><a href="appearance.html">Edit Appearance</a>
-        </ul>
+            <li><a href="index.html">Home</a>
+            <li><a href="page1.html">Grading</a>
+            <li><a href="page2.html">Schedule</a>
+            <li><a href="page3.html">Tools</a>
+            <li><a href="page4.html">Assignment</a>
+            <li><a href="page5.html" class="active">Graph</a>
+            <li><a href="knowledgebase.html">Knowledge Base</a>
+            <li><a href="appearance.html">edit appearance</a>
+</ul>
     </nav>
     <section class="content">
         <hr />
@@ -50,7 +119,8 @@
         <p>
             onderstaande vindt u een zeer nutteloze grafiek beschrijvende het aantal uren die er per week gemaakt worden
         </p>
-        <div id="flot-placeholder" style="width:300px; height:300px"></div>
+            <div id="graph" style="width: 400px;height:300px; text-align: center; margin:0 auto;">
+            </div>
     </section>
 </body>
-</html>
+</html> 
