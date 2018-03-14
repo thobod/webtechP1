@@ -9,7 +9,7 @@
 
     <!-- Javascript -->
     <script type="text/javascript">
-var days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 var data = [
     [1, 0], [2, 0], [3, 2], [4, 0], [5, 2]
 ];
@@ -30,25 +30,25 @@ var options = {
     },
     xaxis:{
         ticks: [
-                 [1,"Mon"],[2,"Tue"],[3,"Wed"],[4,"Thu"],[5,"Fri"]
+                 [1, "Monday"], [2, "Tuesday"], [3, "Wednesday"], [4, "Thursday"], [5, "Friday"]
         ],
     }
 }
 
 var previousPoint = null;
 $.fn.UseTooltip = function () {
-    $(this).bind("plothover", function (event, pos, item) {
-        if (item) {
-            if (previousPoint != item.dataIndex) {
-                previousPoint = item.dataIndex;
+    $(this).bind("plothover", function (event, pos, i) {
+        if (i) {
+            if (previousPoint != i.dataIndex) {
+                previousPoint = i.dataIndex;
 
                 $("#tooltip").remove();
 
-                var x = item.datapoint[0];
-                var y = item.datapoint[1];
+                var x = i.datapoint[0];
+                var y = i.datapoint[1];
 
-                showTooltip(item.pageX, item.pageY,
-                  days[x-  1] + "<br/>" + "<strong>" + y + "</strong> (" + item.series.label + ")");
+                showTooltip(i.pageX, i.pageY,
+                  days[x-  1] + "<br/>" + "<strong>" + y + "</strong> (" + i.series.label + ")");
             }
         }
         else {
@@ -58,8 +58,11 @@ $.fn.UseTooltip = function () {
     });
 };
 
-$(this).bind("plotclick", function (event, pos, obj) {
-    window.location.replace("page2.html");
+$(this).bind("plotclick", function (event, pos, i) {
+    if(i)
+    {
+        alert(i.datapoint[1] + " " +i.series.label + " on " + days[i.datapoint[0]-1]);
+    }
 });
 
 
